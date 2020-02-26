@@ -21,3 +21,9 @@ yarn dev
 yarn build
 yarn start
 ```
+
+or
+
+```Shell
+yarn serve
+```

@@ -1,9 +1,9 @@
 {
-    "restartable": "rs",
-    "watch": [
-      "dist"
-    ],
-    "env": {
-      "NODE_ENV": "development"
-    }
-  }
+  "restartable": "rs",
+  "watch": ["src"],
+  "ext": "ts",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "exec": "ts-node ./src/app.ts"
+}

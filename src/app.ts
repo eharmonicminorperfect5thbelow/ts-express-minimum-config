@@ -1,14 +1,15 @@
-import * as express from 'express'
+import express from 'express'
+import path from 'path'
+import user from './routes/user'
 
-const app: express.Application = express()
-const router: express.Router = express.Router()
+const app = express()
 const port = process.env.PORT || 3000
 
-router.get('/', (req: express.Request, res: express.Response) => {
-  res.send('Hello, world!!')
-});
-app.use('/', router)
-
+app.use('/', express.static(path.resolve(__dirname, 'public')))
+app.use('/user', user)
+app.use((req, res) => {
+  res.sendStatus(404);
+})
 app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/`)
+  console.log(`listening: ${port}`)
 })

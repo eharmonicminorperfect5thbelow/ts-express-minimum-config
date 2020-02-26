@@ -13,7 +13,8 @@ module.exports = {
         loader: 'ts-loader',
         test: /\.ts$/,
         exclude: [
-          /node_modules/
+          /node_modules/,
+          /\.test\.ts$/
         ],
         options: {
           configFile: 'tsconfig.json'
@@ -27,5 +28,8 @@ module.exports = {
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  node: {
+    __dirname: false
   }
 }
