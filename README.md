@@ -15,6 +15,8 @@ yarn install
 yarn dev
 ```
 
+- Auto-reload by nodemon
+
 ### Production
 
 ```Shell
